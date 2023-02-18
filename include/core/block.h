@@ -14,9 +14,9 @@ public:
     Block &operator=(const Block &);
     bool operator ==(Block) const;
     bool operator !=(Block) const;
-    uint16_t metatileId:10;
-    uint16_t collision:2;
-    uint16_t elevation:4;
+    uint16_t metatileId:14;
+    uint16_t collision = 0;
+    uint16_t elevation:2;
     uint16_t rawValue() const;
 };
 

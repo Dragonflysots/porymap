@@ -7,6 +7,14 @@ and this project somewhat adheres to [Semantic Versioning](https://semver.org/sp
 The **"Breaking Changes"** listed below are changes that have been made in the decompilation projects (e.g. pokeemerald), which porymap requires in order to work properly. It also includes changes to the scripting API that may change the behavior of existing porymap scripts. If porymap is used with a project or API script that is not up-to-date with the breaking changes, then porymap will likely break or behave improperly.
 
 ## [Unreleased]
+### Changed
+- The Palette Editor now remembers the Bit Depth setting.
+
+### Fixed
+- Fix text boxes in the Palette Editor calculating color incorrectly.
+- Fix default object sprites retaining dimensions and transparency of the previous sprite.
+
+## [5.1.1] - 2023-02-20
 ### Added
 - Add `registerToggleAction` to the scripting API
 
@@ -18,6 +26,8 @@ The **"Breaking Changes"** listed below are changes that have been made in the d
 - Fix null characters being unpredictably written to some JSON files.
 - Fix tilesets that share part of their name loading incorrectly.
 - Fix events being hidden behind connecting maps.
+- Metatile labels with values defined outside their tileset are no longer deleted.
+- Fix the Tileset Editor retaining edit history after changing tilesets.
 - Fix some minor visual issues on the Connections tab.
 - Fix bug which caused encounter configurator to crash if slots in fields containing groups were deleted.
 - Fix bug which caused encounter configurator to crash if last field was deleted.
@@ -389,7 +399,8 @@ The **"Breaking Changes"** listed below are changes that have been made in the d
 ## [1.0.0] - 2018-10-26
 This was the initial release.
 
-[Unreleased]: https://github.com/huderlem/porymap/compare/5.1.0...HEAD
+[Unreleased]: https://github.com/huderlem/porymap/compare/5.1.1...HEAD
+[5.1.1]: https://github.com/huderlem/porymap/compare/5.1.0...5.1.1
 [5.1.0]: https://github.com/huderlem/porymap/compare/5.0.0...5.1.0
 [5.0.0]: https://github.com/huderlem/porymap/compare/4.5.0...5.0.0
 [4.5.0]: https://github.com/huderlem/porymap/compare/4.4.0...4.5.0

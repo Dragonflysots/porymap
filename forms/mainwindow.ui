@@ -1126,7 +1126,7 @@
                      </sizepolicy>
                     </property>
                     <attribute name="title">
-                     <string>Collision</string>
+                     <string>Elevation</string>
                     </attribute>
                     <layout class="QGridLayout" name="gridLayout_CollisionSelection">
                      <property name="sizeConstraint">

@@ -9,9 +9,9 @@ Block::Block(uint16_t metatileId, uint16_t collision, uint16_t elevation) :
 {  }
 
 Block::Block(uint16_t word) :
-    metatileId(word & 0x3fff),
+    metatileId(word & 0x1FFF),
     collision(0),
-    elevation((word >> 14) & 0x3)
+    elevation((word >> 13) & 0x7)
 {  }
 
 Block::Block(const Block &other) :
@@ -29,8 +29,8 @@ Block &Block::operator=(const Block &other) {
 
 uint16_t Block::rawValue() const {
     return static_cast<uint16_t>(
-                (metatileId & 0x3fff) +
-                ((elevation & 0x3) << 14));
+                (metatileId & 0x1FFF) +
+                ((elevation & 0x7) << 13));
 }
 
 bool Block::operator ==(Block other) const {
